@@ -9,7 +9,6 @@ auth.set_access_token(identity.access_token, identity.access_token_secret)
 api = tweepy.API(auth)
 
 public_tweets = api.search("machine learning")
-tweet = public_tweets[0]
 for tweet in public_tweets:
     status = api.get_status(tweet.id, tweet_mode="extended")
     try:
