@@ -1,7 +1,10 @@
 import tweepy
+from identity import Identity
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+identity = Identity()
+
+auth = tweepy.OAuthHandler(identity.consumer_key, identity.consumer_secret)
+auth.set_access_token(identity.access_token, identity.access_token_secret)
 
 api = tweepy.API(auth)
 
