@@ -1,0 +1,2 @@
+tweepy~=3.10.0
+setuptools~=57.0.0
