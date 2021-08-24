@@ -13,6 +13,7 @@ for tweet in public_tweets:
     status = api.get_status(tweet.id, tweet_mode="extended")
     try:
         api.create_friendship(tweet.user.id)
+        api.create_favorite(tweet.id)
         api.retweet(tweet.id)
         print(status.retweeted_status.full_text)
     except:  # Not a Retweet
